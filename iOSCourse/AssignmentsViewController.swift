@@ -27,6 +27,7 @@ class AssignmentsViewController: UIViewController {
         
         assignmentsTable.delegate = self
         assignmentsTable.dataSource = self
+        read()
  
         // Do any additional setup after loading the view.
     }
@@ -68,6 +69,16 @@ class AssignmentsViewController: UIViewController {
         assignmentsTable.reloadData()
     }
     
+    func read(){
+        let request : NSFetchRequest<Assignments> = Assignments.fetchRequest()
+        do {
+            assignmentsList = try context.fetch(request)
+        } catch  {
+            (error.localizedDescription)
+        }
+        
+    }
+    
 }
 
 extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource{
@@ -89,6 +100,37 @@ extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if assignmentsTable.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            assignmentsTable.cellForRow(at: indexPath)?.accessoryType = .none
+        } else{
+            assignmentsTable.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }
+        
+        //edit coredata
+        
+        assignmentsList[indexPath.row].complete = !assignmentsList[indexPath.row].complete
+        
+        save()
+        
+        assignmentsTable.deselectRow(at: indexPath, animated: true)
+    }
+    
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAssignment = UIContextualAction(style: .normal, title: "Delete") { [self]_, _, _ in
+            
+            context.delete(assignmentsList[indexPath.row])
+            assignmentsList.remove(at: indexPath.row)
+            save()
+        }
+        deleteAssignment.backgroundColor = .red
+            return UISwipeActionsConfiguration(actions: [deleteAssignment])
+    }
+    
+    
     
     
     
