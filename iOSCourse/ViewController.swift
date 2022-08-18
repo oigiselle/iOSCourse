@@ -7,13 +7,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+ 
+    @IBOutlet weak var helloLabel: UILabel!
+    let userDefaults = UserDefaults()
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let fNamevalue = userDefaults.value(forKey: "fname") as? String {
+            helloLabel.text = "Hello, " + fNamevalue + "!"
+        }
+        
+
+        
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let fNamevalue = userDefaults.value(forKey: "fname") as? String {
+            helloLabel.text = "Hello, " + fNamevalue + "!"
+        }
+        
+    }
 }
 
