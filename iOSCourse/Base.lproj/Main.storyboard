@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="olf-pd-Vn4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0tk-A5-Yts">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="5376" identifier="iOS"/>
@@ -188,7 +188,7 @@
                         <constraints>
                             <constraint firstItem="Jmk-3h-pph" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hc1-cr-Hdk" secondAttribute="bottom" constant="50" id="DU1-C6-Dyt"/>
                             <constraint firstItem="plX-rY-OQe" firstAttribute="top" secondItem="HIG-bV-WEz" secondAttribute="bottom" constant="10" id="FkZ-eU-ksO"/>
-                            <constraint firstItem="hc1-cr-Hdk" firstAttribute="trailing" secondItem="plX-rY-OQe" secondAttribute="trailing" constant="20" id="PkY-1Q-RSq"/>
+                            <constraint firstItem="hc1-cr-Hdk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="plX-rY-OQe" secondAttribute="trailing" id="PkY-1Q-RSq"/>
                             <constraint firstItem="Jmk-3h-pph" firstAttribute="leading" secondItem="hc1-cr-Hdk" secondAttribute="leading" id="XcF-z2-1Y9"/>
                             <constraint firstItem="hc1-cr-Hdk" firstAttribute="trailing" secondItem="HIG-bV-WEz" secondAttribute="trailing" constant="20" id="aMR-pg-lem"/>
                             <constraint firstItem="hc1-cr-Hdk" firstAttribute="bottom" secondItem="plX-rY-OQe" secondAttribute="bottom" constant="40" id="eFZ-FU-pLp"/>
@@ -414,13 +414,40 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cambrian Course Selection" id="Iq2-X1-vgR"/>
-                    <connections>
-                        <outlet property="helloLabel" destination="7NW-YU-jGp" id="Drs-a0-axi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daQ-di-Ucl" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3621.739130434783" y="-84.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1RA-Yi-4y5">
+            <objects>
+                <viewController id="Kad-A3-Vma" customClass="ViewController" customModule="iOSCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dr7-sL-1hb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JaD-oM-WZY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fHz-Ab-lzb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JaD-oM-WZY" firstAttribute="leading" secondItem="fHz-Ab-lzb" secondAttribute="leading" id="665-Bj-YTd"/>
+                            <constraint firstItem="fHz-Ab-lzb" firstAttribute="trailing" secondItem="JaD-oM-WZY" secondAttribute="trailing" id="KNw-6c-cHd"/>
+                            <constraint firstItem="JaD-oM-WZY" firstAttribute="top" secondItem="fHz-Ab-lzb" secondAttribute="top" id="QVm-yw-Dh6"/>
+                            <constraint firstItem="fHz-Ab-lzb" firstAttribute="bottom" secondItem="JaD-oM-WZY" secondAttribute="bottom" id="gvj-eW-LG7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coursesTableView" destination="JaD-oM-WZY" id="FMm-mC-aMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lzZ-Lf-gn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4629" y="-102"/>
         </scene>
         <!--Assignments-->
         <scene sceneID="7sQ-Lm-mLQ">
