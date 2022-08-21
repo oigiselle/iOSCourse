@@ -12,7 +12,9 @@
 		270D1B3C28AE123D00D7214A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 270D1B3B28AE123D00D7214A /* FirebaseAuth */; };
 		270D1B3E28AE128000D7214A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D1B3D28AE128000D7214A /* LoginViewController.swift */; };
 		270D1B4028AE128F00D7214A /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D1B3F28AE128F00D7214A /* CreateViewController.swift */; };
+		274F25E928B1A4A300F06330 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274F25E828B1A4A300F06330 /* CourseTableViewController.swift */; };
 		2757257C28AEAAE500E72E05 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757257B28AEAAE500E72E05 /* MapViewController.swift */; };
+		27621B3028B163D5001DE70F /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27621B2F28B163D5001DE70F /* ApiHelper.swift */; };
 		27679B0828AE942B00DF06C2 /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27679B0728AE942B00DF06C2 /* AssignmentsViewController.swift */; };
 		2778F9C628AE0BA50052A0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778F9C528AE0BA50052A0C8 /* AppDelegate.swift */; };
 		2778F9C828AE0BA50052A0C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778F9C728AE0BA50052A0C8 /* SceneDelegate.swift */; };
@@ -20,10 +22,9 @@
 		2778F9D028AE0BA50052A0C8 /* iOSCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2778F9CE28AE0BA50052A0C8 /* iOSCourse.xcdatamodeld */; };
 		2778F9D228AE0BA60052A0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778F9D128AE0BA60052A0C8 /* Assets.xcassets */; };
 		2778F9D528AE0BA60052A0C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778F9D328AE0BA60052A0C8 /* LaunchScreen.storyboard */; };
-		27BA742228AF1DEC00F281F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA742128AF1DEC00F281F8 /* ViewController.swift */; };
-		27BA742428AF21C400F281F8 /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA742328AF21C400F281F8 /* CourseData.swift */; };
 		27D2295428AE7B02005CF1B9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2295328AE7B02005CF1B9 /* ProfileViewController.swift */; };
 		27D44DDB28AEDCE7003E62AC /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D44DDA28AEDCE6003E62AC /* LocationHelper.swift */; };
+		27F5F8C228B1844D00852A66 /* CourseDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5F8C128B1844D00852A66 /* CourseDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,9 @@
 		270D1B3828AE11DF00D7214A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		270D1B3D28AE128000D7214A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		270D1B3F28AE128F00D7214A /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		274F25E828B1A4A300F06330 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		2757257B28AEAAE500E72E05 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		27621B2F28B163D5001DE70F /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		27679B0728AE942B00DF06C2 /* AssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
 		2778F9C228AE0BA50052A0C8 /* iOSCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778F9C528AE0BA50052A0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,10 +44,9 @@
 		2778F9D128AE0BA60052A0C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2778F9D428AE0BA60052A0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2778F9D628AE0BA60052A0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27BA742128AF1DEC00F281F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27BA742328AF21C400F281F8 /* CourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		27D2295328AE7B02005CF1B9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		27D44DDA28AEDCE6003E62AC /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		27F5F8C128B1844D00852A66 /* CourseDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,16 +82,17 @@
 			children = (
 				2778F9CE28AE0BA50052A0C8 /* iOSCourse.xcdatamodeld */,
 				2778F9C528AE0BA50052A0C8 /* AppDelegate.swift */,
+				2778F9C728AE0BA50052A0C8 /* SceneDelegate.swift */,
 				270D1B3428AE112300D7214A /* FirstViewController.swift */,
 				270D1B3D28AE128000D7214A /* LoginViewController.swift */,
-				27D2295328AE7B02005CF1B9 /* ProfileViewController.swift */,
 				270D1B3F28AE128F00D7214A /* CreateViewController.swift */,
+				27D2295328AE7B02005CF1B9 /* ProfileViewController.swift */,
 				27679B0728AE942B00DF06C2 /* AssignmentsViewController.swift */,
-				2778F9C728AE0BA50052A0C8 /* SceneDelegate.swift */,
 				2757257B28AEAAE500E72E05 /* MapViewController.swift */,
 				27D44DDA28AEDCE6003E62AC /* LocationHelper.swift */,
-				27BA742128AF1DEC00F281F8 /* ViewController.swift */,
-				27BA742328AF21C400F281F8 /* CourseData.swift */,
+				27F5F8C128B1844D00852A66 /* CourseDataHelper.swift */,
+				274F25E828B1A4A300F06330 /* CourseTableViewController.swift */,
+				27621B2F28B163D5001DE70F /* ApiHelper.swift */,
 				2778F9CB28AE0BA50052A0C8 /* Main.storyboard */,
 				2778F9D128AE0BA60052A0C8 /* Assets.xcassets */,
 				2778F9D328AE0BA60052A0C8 /* LaunchScreen.storyboard */,
@@ -177,15 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F5F8C228B1844D00852A66 /* CourseDataHelper.swift in Sources */,
 				27679B0828AE942B00DF06C2 /* AssignmentsViewController.swift in Sources */,
 				27D44DDB28AEDCE7003E62AC /* LocationHelper.swift in Sources */,
-				27BA742428AF21C400F281F8 /* CourseData.swift in Sources */,
 				270D1B3E28AE128000D7214A /* LoginViewController.swift in Sources */,
+				274F25E928B1A4A300F06330 /* CourseTableViewController.swift in Sources */,
 				270D1B3528AE112300D7214A /* FirstViewController.swift in Sources */,
-				27BA742228AF1DEC00F281F8 /* ViewController.swift in Sources */,
 				2757257C28AEAAE500E72E05 /* MapViewController.swift in Sources */,
 				270D1B4028AE128F00D7214A /* CreateViewController.swift in Sources */,
 				2778F9C628AE0BA50052A0C8 /* AppDelegate.swift in Sources */,
+				27621B3028B163D5001DE70F /* ApiHelper.swift in Sources */,
 				2778F9D028AE0BA50052A0C8 /* iOSCourse.xcdatamodeld in Sources */,
 				27D2295428AE7B02005CF1B9 /* ProfileViewController.swift in Sources */,
 				2778F9C828AE0BA50052A0C8 /* SceneDelegate.swift in Sources */,
